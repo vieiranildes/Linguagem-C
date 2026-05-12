@@ -18,8 +18,18 @@ int main(){
     printf(" \n 4. Divisão");
     
     scanf("%f", &opcao);
-    
 
+if(opcao == 1){
+        resultado = a + b;
+    }else if( opcao == 2){
+        resultado = a - b;
+    }else if(opcao == 3){
+        resultado = a * b;
+    }else{ resultado = a / b;
+}
+printf("Resultado Final:  %f ", resultado);
+
+    
 
 return 0;
 }
