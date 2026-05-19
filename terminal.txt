@@ -1,0 +1,1 @@
+gcc calculadoraImc.c -o calculadoraImc  && ./calculadoraImc

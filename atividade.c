@@ -26,13 +26,13 @@ int idade;
 char cidade[50];
 
 printf("Qual seu nome: ");
-scanf("%s", &nome);
+scanf("%s", nome);
 
 printf("\nQual sua idade: ");
 scanf("%d", &idade);
 
 printf("\nQual cidade você mora: ");
-scanf("%s", &cidade);
+scanf("%s", cidade);
 
 printf("Olá meu nome é %s tenho %d sou de %s", nome, idade, cidade);
 
