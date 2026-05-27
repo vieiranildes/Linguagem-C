@@ -3,7 +3,7 @@
 int main()
 {
  
-  int opcao;
+ int opcao;
  int valor;
  int resultado;
  
