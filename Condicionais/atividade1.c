@@ -19,23 +19,39 @@ Use float para aceitar medidas decimais
 int main(){
 
    //Entrada: leitura de três dados 
-   int a, b,c;
-   int tringulo;
-   int medio;
+      float a, b,c;
+   
 
-    printf("Digite três numeros inteiros: ");
-    scanf("%d, %d , %d", &a,&b, &c);
+    printf("Digite três lados do triangulo:\n ");
+    printf("Lado 01:\n ");
+    scanf("%d", &a);
+    printf("Lado 02:\n ");
+    scanf("%d", &b);
+    printf("Lado 03: \n");
+    scanf("%d", &c);
 
+
+// Verificação se é um triângulo válido
     if(a+b>c && a+c>b && b+c>a){
+            printf("Triangulo válido\n");
+            
+ // Classificação do triângulo  
+       if(a==b && b==c){
+            printf("Triangulo Valido: Equilatero (3 lados iguais)\n");
+       }else if(b==a ||c==b || b==c){
+            printf("Triangulo Valido: Isosceles (2 lados iguais)\n");
+        } else {
+            printf("Triangulo Valido: Escaleno (todos os lados diferentes)\n");
+        }
+    } else {
+ // Mensagem de erro se não formar um triângulo
+        printf("Erro: Os lados fornecidos nao formam um triangulo valido.\n");
+    }
 
-   }
+      
 
+   
 
-
-
-
-
-    return 0;
+   return 0;
+      
 }
-
-
