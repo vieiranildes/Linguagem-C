@@ -31,10 +31,10 @@ printf("\n1 - Círculo, 2 - Retângulo, 3 - Triângulo: ");
 scanf("%d", &opcao);
 
 if(opcao == 1){
-printf("Qual o valor do raio?");
+    printf("Qual o valor do raio?");
 
 resultado = PI * raio * raio;
-printf("A área é de: %.2f", resultado);
+    printf("A área é de: %.2f", resultado);
 
 }else if( opcao == 2){
     printf("Valor da base: ");
@@ -58,7 +58,7 @@ printf("A área é de: %.2f", resultado);
 
     resultado =  (base * altura) / 2;
 
-printf("A área é de: %.2f", resultado);
+    printf("A área é de: %.2f", resultado);
 
 }
 

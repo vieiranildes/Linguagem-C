@@ -26,7 +26,7 @@ printf("Digite de a nota do aluno 0 a 10: \n");
 scanf("%d",&nota);
 
 if(nota > 10){
-printf("Nota Inválida");
+    printf("Nota Inválida");
 }else if(nota >= 9 && nota <= 10){
     printf("Nota Excelente, parabéns");
 }else if(nota >= 7 && nota <= 8){

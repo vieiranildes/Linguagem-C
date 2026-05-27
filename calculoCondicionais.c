@@ -16,27 +16,48 @@ Teste com: (3,1,2), (5,5,3), (2,2,2)
 */ 
 
 #include <stdio.h>
+#include <stdbool.h>
 
 int main(){
 
-int numero1;
-int numero2;
-int numero3;
+    /*
+    Entradas: Três números interiros
+     */
+    int numero[3];
+    int copoVazio;
+    bool trocar; 
 
-printf("Digite três número: ");
-scanf("%d %d %d", &numero1 , &numero2 , &numero3);
+    trocar = true;
+    
+    //criar a repetição para leitura do meu vetor com o for com a estrutura de 3 repetição
+    for(int i = 0; i<3; i++){
+       printf("Digite três numeros inteiros: \n");
+       scanf("%d", &numero[i]);   
+    }
 
-if(numero1 > numero2 && numero1 > numero3){
-    printf("Maior número %d", numero1);
-}else if( numero2 > numero3){
-printf("Intermediario %d", numero2);
-}else{
-    printf("Menor número %d", numero3);
-}
+    while(trocar == true){  //Pq??
+        trocar = false;
+        for( int i=0; i<3; i++){
+            if(numero[i] < numero[i+1]){
+                copoVazio = numero[i];
+                numero[i] = numero[i +1];
+                numero[i +1] = copoVazio;
+                trocar = true;
+            }
+        }
+    }
+ 
+    for(int i = 0; i<3; i++){
+       printf("%d \n", numero[i]);       
+    }
+    
+
+  
+
+    /*
+    Resultado: Exibir maior, intermediario e menor valor em ordem decrescente
+         */
 
 
-
-
-
-return 0;
+    return 0;
 }
