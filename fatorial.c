@@ -13,37 +13,44 @@ Use long int para números maiores, pois fatorial cresce rápido
 
 Teste com: 0, 1, 5, 10
 
+
+
 */ 
+
 
 #include<stdio.h>
 
 int main(){
+    // Entrada: ler um número inteiro
     
-    // Entrada: Ler um numero inteiro
+    int numero;
+    long long fatorial = 1;
     
-    int n;
-    long int fatorial = 5;
+    printf("Digite um número positivo: ");
+    scanf("%d", & numero);
     
-    printf("Digite um número inteiro:\n ");
-    scanf("%d", &n);
     
-    // só aceita numero positivo
-    if(n < 0){
-        printf("Somente número positivo, digite novamente");
+    // Verificar se é numero positivo
+    
+    if(numero < 0){
+        printf("Numeros válidos somente positivo \n");
+        
+        
+        // calcular o número exibido
     }else{
-    
-    for(int i=1; i<=n;i++){
-        // Laço para multiplicar os números de 1 até n
-             fatorial *= i; // O mesmo que: fatorial = fatorial * i;
+        
+        for(int i=1; i<=numero;i++){
+            fatorial *=i;
         }
-        printf("O fatorial de %d é %ld\n", n, fatorial);
+        
+        printf("O fatorial de %d é %lld\n", numero, fatorial);
     }
-        
-        
+    
+    // 
     
     
-    
-    
-    return 0;
 
+    
+
+       return 0;
 }
