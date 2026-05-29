@@ -13,7 +13,7 @@ while(opcao != 0){
     printf(" \n 1. Dobro");
     printf(" \n 2. Quadrado");
     printf(" \n 3. Sair");
-    ; 
+    
        printf("\nEscolha uma opção: "); 
     scanf("%d", &opcao);
     
