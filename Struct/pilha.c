@@ -42,8 +42,8 @@ int main(){
     push(&p, 20);
     push(&p, 45);
     printf("%d\n", pop(&p)); /* 20*/
-    printf("%d\n", peek(&p));
-     //pop(&p);
+   // printf("%d\n", peek(&p)); /O peek só ver, ele não retira nada na pilha
+     pop(&p);
     printf("%d\n", pop(&p));
 
     return 0;
