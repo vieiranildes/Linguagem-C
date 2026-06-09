@@ -1,0 +1,15 @@
+/*
+Dada uma Fila inicialmente vazia, execute as operações abaixo em ordem. Preencha o estado da fila e os valores de retorno em cada linha.
+
+Operação	Fila após (frente → fundo)	
+enqueue(5)	?	—   5
+enqueue(12)	?	— 5,12
+enqueue(3)	?	— 5,12,3
+dequeue()	?	- 12,3
+enqueue(8)	?	— 12,3,8
+front()	?	? 12,3,8
+dequeue()  ? - 3,8
+
+*/ 
+
+
