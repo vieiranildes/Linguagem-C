@@ -45,7 +45,7 @@ int front(fila * f){
 int main(){
  
     fila f; inicializar(&f);
-    enqueue(&f, 101)     // enfileirar
+    enqueue(&f, 101);    // enfileirar
     enqueue(&f, 102);
     enqueue(&f, 103);
     enqueue(&f, 104);
