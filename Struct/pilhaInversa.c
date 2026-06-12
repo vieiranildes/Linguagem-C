@@ -23,7 +23,7 @@ Limite N: if(n > MAX) n = MAX;
 
 
 #include<stdio.h>
-#define Max 10
+#define Max 3
 
 typedef struct{
 
@@ -34,26 +34,31 @@ int topo;
 void inicializar(pilha * p){
     p->topo = -1;
 
-}int estaVazia(pilha * p){
+}
+int estaVazia(pilha * p){
     return p->topo == -1;
     
-}int estaCheia(pilha * p){
-    return p-> topo == Max -1;
+}
+int estaCheia(pilha *p){
+    return p->topo == Max-1;
 
-}void push(pilha * p, int valor){
-    if(estaCheia(p));
+}
+void push(pilha *p, int valor){
+    if(estaCheia(p))
         return;
 
     p->dados[++p->topo] = valor;
-}int pop(pilha * p){
-    if(estaVazia(p));
+}
+int pop(pilha * p){
+    if(estaVazia(p))
         return -1;
 
     return p->dados[p->topo--];
-}int peek(pilha * p){
+}
+int peek(pilha * p){
     if(estaVazia(p)) return -1;
 
-    return p-> dados[p-> topo];
+    return p->dados[p->topo];
 }
 
 
@@ -62,7 +67,8 @@ int main(){
     int soma = 0;
     int media;
     int valor;
-
+    int vetorAuxiliar[Max];
+    
 
     pilha p;
     inicializar(&p);
@@ -73,18 +79,24 @@ int main(){
             push(&p, valor);                
             
         }
+         printf("Topo da Pilha %d\n", peek(&p));   // exibir
 
+         for(int i=0; i<=Max; i++){
+            printf("%d", p.dados[i]);
+         }
+         printf("\nInverso:");
+        
         while(!estaVazia(&p)){
 
-            printf("%d\n", pop(&p));
+            printf("%d\n", pop(&p)); //desempilhar
 
-
+            soma += valor;
+            media = soma/10; 
+           
+            
             // colocar um vetor auxiliar para salvar e exibir de forma invertida 
 
-            
-                printf("%d\n", peek(&p));
-
-
+                
         }
 
 
@@ -93,22 +105,3 @@ int main(){
 
    return 0;
 }
-
-
-
-
-
-Use while(!estaVazia(&p)) para desempilhar e exibir
-Exiba a sequência original e depois a invertida
-Extra: calcule a soma e a média durante o desempilhamento
-💡 Dicas
-
-Guarde os valores em um vetor auxiliar para conseguir exibir a ordem original depois
-
-O comportamento LIFO garante a inversão automaticamente — não precisa de lógica extra
-
-Limite N: if(n > MAX) n = MAX;*/
-
-
-
- 
